@@ -14,7 +14,7 @@ variable "resource_group_name" {
 
 variable "resource_tags" {
   description = "Map of tags to apply to taggable resources in this module.  By default the taggable resources are tagged with the name defined above and this map is merged in"
-  type        = "map"
+  type        = map(string)
   default     = {}
 }
 
@@ -27,3 +27,4 @@ variable "storage_account_replication_type" {
   description = "(Required) Defines the type of replication to use for this storage account. Valid options are LRS*, GRS, RAGRS and ZRS."
   default     = "LRS"
 }
+
